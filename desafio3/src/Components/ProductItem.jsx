@@ -1,6 +1,7 @@
 import { Image, StyleSheet, Text } from "react-native";
 import React from "react";
 import Card from "./Card";
+import { colors } from "../Global/Colors";
 
 const ProductItem = ({ item }) => {
   return (
@@ -28,6 +29,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     height: 200,
     justifyContent: "space-between",
+    backgroundColor: colors.rose2,
   },
   textProduct: {
     fontSize: 15,
