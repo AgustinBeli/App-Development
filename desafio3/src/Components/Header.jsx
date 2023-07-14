@@ -16,10 +16,11 @@ const styles = StyleSheet.create({
   containerHeader: {
     height: "10%",
     backgroundColor: colors.turquoise,
-    justifyContent: "center",
+    justifyContent: "flex-end",
     alignItems: "center",
   },
   textHeader: {
-    fontSize: 10,
+    fontSize: 30,
+    color: colors.black,
   },
 });
