@@ -5,7 +5,7 @@ import Card from "./Card";
 const ProductItem = ({ item }) => {
   return (
     <Card additionalStyle={styles.additionalStyleCard}>
-      <Text>{item.title}</Text>
+      <Text style={styles.textProduct}>{item.title}</Text>
       <Image
         style={styles.image}
         resizeMode="cover"
@@ -18,6 +18,18 @@ const ProductItem = ({ item }) => {
 export default ProductItem;
 
 const styles = StyleSheet.create({
-  image: {},
-  additionalStyleCard: {},
+  image: {
+    height: 150,
+    width: 150,
+    borderRadius: 100,
+  },
+  additionalStyleCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    height: 200,
+    justifyContent: "space-between",
+  },
+  textProduct: {
+    fontSize: 15,
+  },
 });

@@ -4,7 +4,7 @@ import { colors } from "../Global/Colors";
 
 const Card = ({ children, additionalStyle = [] }) => {
   return (
-    <View style={(styles.containerCard, additionalStyle)}>{children}</View>
+    <View style={[styles.containerCard, additionalStyle]}>{children}</View>
   );
 };
 
@@ -12,7 +12,7 @@ export default Card;
 
 const styles = StyleSheet.create({
   containerCard: {
-    width: 150,
+    width: 380,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -23,10 +23,10 @@ const styles = StyleSheet.create({
     elevation: 9,
     borderWidth: 2,
     borderColor: "black",
-    justifyContent: "center",
+    backgroundColor: colors.rose,
     alignItems: "center",
-    backgroundColor: colors.turquoise3,
     marginVertical: 10,
-    borderRadius: 10,
+    borderRadius: 100,
+    padding: 20,
   },
 });

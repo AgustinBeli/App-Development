@@ -1,4 +1,4 @@
-const input = "agustin"
+const input = "agustin123"
 
 const expression = /^[0-9]*$/
 

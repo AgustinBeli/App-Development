@@ -22,9 +22,7 @@ export default Home;
 const styles = StyleSheet.create({
   containerHome: {
     flex: 1,
-    backgroundColor: colors.rose,
-    justifyContent: "center",
+    backgroundColor: colors.turquoise3,
     alignItems: "center",
-    paddingTop: 20,
   },
 });

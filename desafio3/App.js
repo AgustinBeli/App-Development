@@ -7,10 +7,10 @@ import { useState } from 'react';
 
 export default function App() {
 
-  const [categorySelected, setCategorySelected] = useState("")
+  const [categorySelected, setCategorySelected] = useState ("")
 
-  const [fontsLoaded] = useFonts({
-    'Montserrat':require('./src/Assets/Fonts/Montserrat/MontserratAlternates-Regular.ttf')
+  const [fontsLoaded] = useFonts ({
+    "Montserrat": require("./src/Assets/Fonts/Montserrat/MontserratAlternates-Regular.ttf")
   })
 
   if (!fontsLoaded) {
@@ -19,14 +19,14 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Header/>
-      { 
+      <Header />
+      {
         categorySelected ?
-        <ItemListCategory
-          category={categorySelected}
+        <ItemListCategory 
+          category={categorySelected} 
           setCategory={setCategorySelected}
-        /> :
-      <Home 
+        />:
+      <Home
         setCategorySelected={setCategorySelected}
       />
       }

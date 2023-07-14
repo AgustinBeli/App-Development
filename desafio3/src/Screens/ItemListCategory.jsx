@@ -1,11 +1,12 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import productsRaw from "../Data/products.json";
 import ProductItem from "../Components/ProductItem";
+import { colors } from "../Global/Colors";
 import Search from "../Components/Search";
 
 const ItemListCategory = ({ category, setCategory }) => {
-  const [categorySelected, setCategorySelected] = useState([category]);
+  const [categorySelected, setCategorySelected] = useState(category);
   const [products, setProducts] = useState([]);
   const [keyword, setKeyword] = useState("");
   const [keywordError, setKeywordError] = useState("");
@@ -27,27 +28,39 @@ const ItemListCategory = ({ category, setCategory }) => {
       setKeyword(input);
       setKeywordError("");
     } else {
-      setKeywordError("Solo letras y números");
+      console.log("Sólo letras y números");
+      setKeywordError("Sólo letras y números");
     }
   };
 
   return (
-    <View>
+    <View style={styles.containerSearch}>
       <Search
         onSearch={onSearch}
         error={keywordError}
         goBack={() => setCategory("")}
       />
-      <FlatList
-        data={products}
-        keyExtractor={(product) => product.id}
-        renderItem={({ item }) => ProductItem({ item })}
-        showsVerticalScrollIndicator={false}
-      />
+      <View style={styles.containerProducts}>
+        <FlatList
+          style={styles.containerCategory}
+          data={products}
+          keyExtractor={(product) => product.id}
+          renderItem={({ item }) => ProductItem({ item })}
+          showsVerticalScrollIndicator={false}
+        />
+      </View>
     </View>
   );
 };
 
 export default ItemListCategory;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  containerSearch: {
+    height: "90%",
+    backgroundColor: colors.turquoise3,
+  },
+  containerProducts: {
+    alignItems: "center",
+  },
+});
