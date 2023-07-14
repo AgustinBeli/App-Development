@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Iphone 11",
+        "description": "An apple mobile which is nothing like apple",
+        "price": 800,
+        "stock": 10,
+        "brand": "Apple",
+        "category": "smartphones"
+    },
+    {
+        "id": 2,
+        "title": "Iphone 14",
+        "description": "An apple mobile which is nothing like apple",
+        "price": 1200,
+        "stock": 5,
+        "brand": "Apple",
+        "category": "smartphones"
+    }
+]

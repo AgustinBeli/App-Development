@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
   },
   textHeader: {
     fontSize: 30,
+    fontFamily: "Montserrat",
     color: colors.black,
   },
 });
