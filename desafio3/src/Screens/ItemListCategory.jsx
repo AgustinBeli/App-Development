@@ -5,7 +5,7 @@ import ProductItem from "../Components/ProductItem";
 import { colors } from "../Global/Colors";
 import Search from "../Components/Search";
 
-const ItemListCategory = ({ category, setCategory }) => {
+const ItemListCategory = ({ category, setCategory, setProductSelected }) => {
   const [categorySelected, setCategorySelected] = useState(category);
   const [products, setProducts] = useState([]);
   const [keyword, setKeyword] = useState("");
@@ -28,7 +28,6 @@ const ItemListCategory = ({ category, setCategory }) => {
       setKeyword(input);
       setKeywordError("");
     } else {
-      console.log("Sólo letras y números");
       setKeywordError("Sólo letras y números");
     }
   };
@@ -45,7 +44,13 @@ const ItemListCategory = ({ category, setCategory }) => {
           style={styles.containerCategory}
           data={products}
           keyExtractor={(product) => product.id}
-          renderItem={({ item }) => ProductItem({ item })}
+          renderItem={({ item }) => (
+            <ProductItem
+              item={item}
+              setProductSelected={setProductSelected}
+              setCategorySelected={setCategory}
+            />
+          )}
           showsVerticalScrollIndicator={false}
         />
       </View>

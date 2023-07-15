@@ -14,9 +14,7 @@ export default Header;
 
 const styles = StyleSheet.create({
   containerHeader: {
-    height: "10%",
     backgroundColor: colors.turquoise,
-    justifyContent: "flex-end",
     alignItems: "center",
   },
   textHeader: {

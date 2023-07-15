@@ -10,7 +10,9 @@ const Home = ({ setCategorySelected }) => {
       <FlatList
         data={categories}
         keyExtractor={(category) => category}
-        renderItem={({ item }) => CategoryItem({ item, setCategorySelected })}
+        renderItem={({ item }) => (
+          <CategoryItem item={item} setCategorySelected={setCategorySelected} />
+        )}
         showsVerticalScrollIndicator={false}
       />
     </View>
