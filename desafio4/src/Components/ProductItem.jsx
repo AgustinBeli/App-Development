@@ -5,7 +5,7 @@ import { colors } from "../Global/Colors";
 
 const ProductItem = ({ item, navigation }) => {
   const onSelect = (id) => {
-    navigation.navigate("ItemDetail", { productId: item.id });
+    navigation.navigate("Detail", { productId: item.id, title: item.title });
   };
 
   return (

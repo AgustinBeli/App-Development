@@ -15,25 +15,15 @@ const Navigator = () => {
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName="Home"
-          screenOptions={({ route }) => ({
+          screenOptions={({ route, navigation }) => ({
             header: () => {
-              return (
-                <Header
-                  title={
-                    route.name === "Categories"
-                      ? "Categories"
-                      : route.name === "ItemListCategory"
-                      ? route.params.category
-                      : "ItemDetail"
-                  }
-                />
-              );
+              return <Header route={route} navigation={navigation} />;
             },
           })}
         >
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="ItemListCategory" component={ItemListCategory} />
-          <Stack.Screen name="ItemDetail" component={ItemDetail} />
+          <Stack.Screen name="Detail" component={ItemDetail} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>

@@ -31,20 +31,7 @@ const ItemDetail = ({ navigation, route }) => {
 
   return (
     <View style={styles.itemDetail}>
-      <View style={styles.iconDetail}>
-        <Pressable
-          style={styles.backItemDetail}
-          onPress={() => navigation.goBack()}
-        >
-          <Feather name="arrow-left-circle" size={32} color="black" />
-        </Pressable>
-        <Pressable
-          style={styles.backItemDetail}
-          onPress={() => navigation.navigate("Home")}
-        >
-          <Feather name="home" size={30} color="black" />
-        </Pressable>
-      </View>
+      <View></View>
 
       {product ? (
         <View
@@ -87,16 +74,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: colors.turquoise3,
   },
-  iconDetail: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  backItemDetail: {
-    margin: 5,
-  },
   containerItemDetail: {
     flexDirection: "column",
     alignItems: "center",
+    marginTop: 20,
   },
   containerItemDetailLandscape: {
     flexDirection: "row",
@@ -113,6 +94,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
     marginLeft: 10,
     marginRight: 10,
+    gap: 15,
   },
   textsLandscape: {
     flexDirection: "column",
