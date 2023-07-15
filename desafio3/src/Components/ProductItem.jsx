@@ -1,17 +1,9 @@
-import {
-  Image,
-  Pressable,
-  StyleSheet,
-  Text,
-  useWindowDimensions,
-} from "react-native";
+import { Image, Pressable, StyleSheet, Text } from "react-native";
 import React from "react";
 import Card from "./Card";
 import { colors } from "../Global/Colors";
 
 const ProductItem = ({ item, setProductSelected, setCategorySelected }) => {
-  const { height, width } = useWindowDimensions();
-
   const onSelect = (id) => {
     setProductSelected(id);
     setCategorySelected("");
@@ -35,18 +27,20 @@ export default ProductItem;
 
 const styles = StyleSheet.create({
   image: {
-    height: 150,
-    width: 150,
+    height: 80,
+    width: 80,
     borderRadius: 100,
   },
   additionalStyleCard: {
     flexDirection: "row",
     alignItems: "center",
-    height: 200,
     justifyContent: "space-between",
     backgroundColor: colors.rose2,
+    width: 300,
+    height: 110,
   },
   textProduct: {
-    fontSize: 15,
+    width: "65%",
+    fontSize: 20,
   },
 });

@@ -1,14 +1,13 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import Card from "./Card";
-import { colors } from "../Global/Colors";
 import { Pressable } from "react-native";
 
 const CategoryItem = ({ item, setCategorySelected }) => {
   return (
     <Pressable onPress={() => setCategorySelected(item)}>
       <Card>
-        <Text>{item}</Text>
+        <Text style={styles.textCard}>{item}</Text>
       </Card>
     </Pressable>
   );
@@ -16,4 +15,8 @@ const CategoryItem = ({ item, setCategorySelected }) => {
 
 export default CategoryItem;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  textCard: {
+    fontSize: 20,
+  },
+});

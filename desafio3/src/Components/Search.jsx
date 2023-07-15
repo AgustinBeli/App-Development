@@ -16,23 +16,17 @@ const Search = ({ onSearch, error = "", goBack }) => {
   const [keyword, setKeyword] = useState("");
   const { width, height } = useWindowDimensions();
 
+  console.log(width, height);
+
   return (
-    <View
-      style={width > 400 ? styles.containerSearch : styles.containerSearchSm}
-    >
+    <View style={styles.containerSearch}>
       <TextInput
         style={styles.containerTextInput}
         placeholder="Search..."
         value={keyword}
         onChangeText={setKeyword}
       />
-      <View
-        style={
-          width < 400
-            ? styles.containerSearchBar
-            : styles.containerSearchBarLandscape
-        }
-      >
+      <View style={styles.containerSearchButtons}>
         <Pressable onPress={() => onSearch(keyword)}>
           <FontAwesome name="search" size={24} color="black" />
         </Pressable>
@@ -52,26 +46,14 @@ export default Search;
 
 const styles = StyleSheet.create({
   containerSearch: {
-    flexDirection: "row",
-    height: "20%",
-    justifyContent: "space-evenly",
-    alignItems: "center",
-    backgroundColor: colors.rose,
-  },
-  containerSearchSm: {
     flexDirection: "column",
-    height: "30%",
+    height: 100,
     justifyContent: "space-evenly",
     alignItems: "center",
     backgroundColor: colors.rose,
   },
-  containerSearchBar: {
+  containerSearchButtons: {
     width: 250,
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-  },
-  containerSearchBarLandscape: {
-    width: 100,
     flexDirection: "row",
     justifyContent: "space-evenly",
   },

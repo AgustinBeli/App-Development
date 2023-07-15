@@ -13,6 +13,7 @@ export default Card;
 const styles = StyleSheet.create({
   containerCard: {
     width: 300,
+    height: 60,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -25,8 +26,9 @@ const styles = StyleSheet.create({
     borderColor: "black",
     backgroundColor: colors.rose,
     alignItems: "center",
+    justifyContent: "center",
     marginVertical: 10,
     borderRadius: 100,
-    padding: 20,
+    padding: 15,
   },
 });

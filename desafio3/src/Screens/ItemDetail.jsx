@@ -52,7 +52,11 @@ const ItemDetail = ({ idSelected, setProductSelected }) => {
             resizeMode="cover"
             style={styles.image}
           />
-          <View style={styles.texts}>
+          <View
+            style={
+              orientation === "portrait" ? styles.texts : styles.textsLandscape
+            }
+          >
             <Text>{product.title}</Text>
             <Text>{product.description}</Text>
             <Text>${product.price}</Text>
@@ -81,7 +85,7 @@ const styles = StyleSheet.create({
   },
   containerItemDetail: {
     flexDirection: "column",
-    padding: 10,
+    alignItems: "center",
   },
   containerItemDetailLandscape: {
     flexDirection: "row",
@@ -91,8 +95,15 @@ const styles = StyleSheet.create({
   image: {
     width: 150,
     height: 150,
+    borderRadius: 30,
   },
   texts: {
+    flexDirection: "column",
+    marginTop: 30,
+    marginLeft: 10,
+    marginRight: 10,
+  },
+  textsLandscape: {
     flexDirection: "column",
     marginLeft: 10,
     marginRight: 10,

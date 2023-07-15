@@ -62,7 +62,7 @@ export default ItemListCategory;
 
 const styles = StyleSheet.create({
   containerSearch: {
-    height: "90%",
+    flex: 1,
     backgroundColor: colors.turquoise3,
   },
   containerProducts: {

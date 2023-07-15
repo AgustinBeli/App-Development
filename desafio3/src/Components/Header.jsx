@@ -14,11 +14,13 @@ export default Header;
 
 const styles = StyleSheet.create({
   containerHeader: {
+    height: 80,
     backgroundColor: colors.turquoise,
     alignItems: "center",
+    justifyContent: "center",
   },
   textHeader: {
-    fontSize: 30,
+    fontSize: 45,
     fontFamily: "Montserrat",
     color: colors.black,
   },
